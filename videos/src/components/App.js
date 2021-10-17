@@ -1,43 +1,56 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import VideoList from "./VideoList";
+import VideoDetail from "./VideoDetail";
 import youtube from "../api/youtube";
-import Spinner from "./Spinner";
+// import Spinner from "./Spinner";
 
 class App extends React.Component {
-    state = { videos: [], searching: false };
+    state = { videos: [], selectedVideo: null };
 
-    onSearchBarSubmit = async (term) => {
+    componentDidMount() {
+        this.onTermSubmit("koala");
+    }
+
+    onTermSubmit = async (term) => {
         try {
-            this.setState({ searching: true });
-
             const results = await youtube.get("/search", {
                 params: {
-                    part: "snippet",
                     q: term,
                 },
             });
 
-            this.setState({ videos: results.data.items, searching: false });
-            console.log(this.state.videos);
+            this.setState({
+                videos: results.data.items,
+                selectedVideo: results.data.items[0],
+            });
         } catch (err) {
             console.log(err.message);
         }
     };
 
-    loadVideos = () => {
-        if (this.state.searching) return <Spinner />;
-
-        return <VideoList videos={this.state.videos} />;
+    onVideoSelect = (video) => {
+        this.setState({ selectedVideo: video });
     };
 
     render() {
         return (
             <div className="ui container">
                 <h1>Videos</h1>
-                <SearchBar onSubmit={this.onSearchBarSubmit} />
-
-                {this.loadVideos()}
+                <SearchBar onTermSubmit={this.onTermSubmit} />
+                <div className="ui grid">
+                    <div className="ui row">
+                        <div className="eleven wide column">
+                            <VideoDetail video={this.state.selectedVideo} />
+                        </div>
+                        <div className="five wide column">
+                            <VideoList
+                                videos={this.state.videos}
+                                onVideoSelect={this.onVideoSelect}
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }

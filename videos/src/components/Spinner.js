@@ -2,7 +2,9 @@ import React from "react";
 
 const Spinner = (props) => {
     return (
-        <div class="ui active text centered inline loader">{props.message}</div>
+        <div className="ui active text centered inline loader">
+            {props.message}
+        </div>
     );
 };
 
