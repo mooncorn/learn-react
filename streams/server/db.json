@@ -1,24 +1,16 @@
 {
   "streams": [
     {
-      "title": "greg",
-      "description": "gdfgsdg",
+      "title": "helloooo",
+      "description": "this is a  new streaaaam",
+      "uid": "10163024234285940213",
       "id": 1
     },
     {
-      "title": "greg",
-      "description": "gdfgsdg",
+      "title": "booobo",
+      "description": "asdfasfgeg",
+      "uid": "101630288183285940213",
       "id": 2
-    },
-    {
-      "title": "greg",
-      "description": "gdfgsdg",
-      "id": 3
-    },
-    {
-      "title": "fdsafa",
-      "description": "dsafas",
-      "id": 4
     }
   ]
 }
