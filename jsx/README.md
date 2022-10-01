@@ -1,2 +1,2 @@
 # JSX
-Understanding JSX, syntax extension to JavaScript .
+Understanding JSX, syntax extension to JavaScript.
