@@ -2,7 +2,7 @@
 
 Independent, reusable pieces of UI.
 
-This simple application renders a list of comments that can be rejected or approved. It showcases how to work with components, props and children.
+This application renders a list of comments that can be rejected or approved. It showcases how to work with components, props and children.
 
 ![List of approvable comments](./images/app.png "List of approvable comments")
 
