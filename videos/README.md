@@ -16,7 +16,7 @@ Renders a controlled component that captures the search term and executes a func
 
 ### `VideoDetail`
 
-Embedding selected video and displays its description.
+Embeds selected video and displays its description.
 
 ### `VideoList`
 
