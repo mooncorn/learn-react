@@ -8,8 +8,13 @@ This application renders a list of comments that can be rejected or approved. It
 
 ## Components
 
-`ApprovalCard` - Wraps children components in a container that displays Approve and Reject buttons.\
-`CommentDetail` - Displays information about a comment.
+### `ApprovalCard`
+
+Wraps children components in a container that displays Approve and Reject buttons.
+
+### `CommentDetail`
+
+Displays information about a comment.
 
 ## Getting Started
 

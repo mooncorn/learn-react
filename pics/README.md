@@ -6,13 +6,21 @@ This application allows to search for pictures by making use of Unsplash API and
 
 ## Components
 
-`App` - Responsible for rendering `SearchBar` and `ImageList` components. Includes a method to make an API request. Also displays a number of images found.
+### `App`
 
-`SearchBar` - Renders a controlled component that captures the search term and executes a function on form submit provided through the props.
+Responsible for rendering `SearchBar` and `ImageList` components. Includes a method to make an API request. Also displays a number of images found.
 
-`ImageList` - Maps an array of images into `ImageCard` components.
+### `SearchBar` 
 
-`ImageCard` - Manages the grid span of image.
+Renders a controlled component that captures the search term and executes a function on form submit provided through the props.
+
+### `ImageList`
+
+Maps an array of images into `ImageCard` components.
+
+### `ImageCard`
+
+Manages the grid span of image.
 
 ## Getting Started
 
