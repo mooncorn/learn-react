@@ -4,6 +4,8 @@ A React application that demonstrates the use of controlled components, api call
 
 This application allows to search for pictures by making use of Unsplash API and displays the result in a well formatted grid.
 
+![List of cat pictures](./images/app.png "List of cat pictures")
+
 ## Components
 
 ### `App`
