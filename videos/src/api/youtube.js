@@ -1,12 +1,11 @@
-import axios from "axios";
-import config from "../config";
+import axios from 'axios';
 
 export default axios.create({
-    baseURL: "https://www.googleapis.com/youtube/v3",
-    params: {
-        part: "snippet",
-        type: "video",
-        maxResults: 5,
-        key: config.API_KEY,
-    },
+  baseURL: 'https://www.googleapis.com/youtube/v3',
+  params: {
+    part: 'snippet',
+    type: 'video',
+    maxResults: 5,
+    key: process.env.REACT_APP_API_KEY,
+  },
 });
